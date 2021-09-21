@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 767.98px) {
+  .header {
+    flex-direction: column;
+  }
+}
+.header__left {
+  width: 75%;
+  height: 100vh;
+  border: 2px solid red;
+}
+@media (max-width: 767.98px) {
+  .header__left {
+    width: 100%;
+    height: 50vh;
+    border: 2px solid red;
+    display: none;
+  }
+}
+.header__right {
+  width: 25%;
+  border: 2px solid green;
+}
+@media (max-width: 767.98px) {
+  .header__right {
+    width: 100%;
+    height: 100vh;
+    border: 2px solid red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
