@@ -5,6 +5,23 @@ $white300: #f7fafc;
 $dark: #1a202c;
 $input: #e8e8e8;
 
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../assets/font/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../assets/font/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../assets/font/Merriweather-Regular.ttf");
+}
+
+$lato-bold: "Lato-Bold";
+$lato-regular: "Lato-Regular";
+$merriweather: "Merriweather";
+
 @mixin for-phone-only{
   @media (max-width: 767.98px){@content;}
 }
@@ -14,29 +31,107 @@ $input: #e8e8e8;
   flex-direction: row;
   @include for-phone-only{
     flex-direction: column;
+    margin-left: 6%;
+    margin-right: 6%;
   }
   &__left {
-    width: 75%;
+    width: 50%;
     height: 100vh;
-    border: 2px solid red;
 
 
     @include for-phone-only{
-      width: 100%;
-      height: 50vh;
-      border: 2px solid red;
       display: none;
     }
   }
   
   &__right {
-    width: 25%;
-    border: 2px solid green;
+    margin-top: 50px;
+    width: 50%;
     @include for-phone-only{
       width: 100%;
-      height: 100vh;
-      border: 2px solid red;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
     }
+  }
+  
+  &__formulario{
+    display: flex;
+    flex-direction: column; 
+  }
+  &__saudacao{
+    font-family: $merriweather;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: $dark;
+    margin: 10px 0;
+  }
+
+  &__titulo{
+    font-family: $merriweather;
+    font-weight: 700;
+    font-size: 2.6rem; 
+    color: $dark;
+    margin: 0 0 20px 0;
   }
 }
 
+label{
+  text-align: left;
+  font-family: $lato-regular;
+  color: $dark;
+  // margin-bottom: 10px;
+  // margin-left: 2px;
+}
+
+input{
+
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+
+  &__field{
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    padding: 10px 8px;
+  }
+
+  &__article{
+    margin: 25px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    label{
+      font-size: 1.4rem;
+    }
+    span a{
+      font-size: 1.4rem;
+      color: $blue;
+    }
+  }
+
+  &__enviar{
+    background: $green;
+    color: $white;
+    font-family: $lato-bold;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    padding: 15px 8px;
+  }
+
+  &__login-google{
+    background: $dark;
+    color: $white;
+    font-family: $lato-bold;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    padding: 15px 8px;
+    margin-top: 10px
+  }
+}
