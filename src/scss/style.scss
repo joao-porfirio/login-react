@@ -45,7 +45,7 @@ $merriweather: "Merriweather";
   }
   
   &__right {
-    margin-top: 50px;
+    margin-top: 70px;
     width: 50%;
     @include for-phone-only{
       width: 100%;
@@ -53,6 +53,7 @@ $merriweather: "Merriweather";
       flex-direction: column;
       justify-content: flex-start;
       text-align: left;
+      max-height: 100vh;
     }
   }
   
@@ -75,22 +76,38 @@ $merriweather: "Merriweather";
     color: $dark;
     margin: 0 0 20px 0;
   }
+
+  &__right-cadastro{ 
+    text-align: center;
+    margin-top: 50px;
+  }
+  &__right-cadastro span{ 
+    font-size: 1.6rem;
+    font-family: $lato-regular;
+  }
+
+  &__right-link{ 
+    font-size: 1.6rem;
+    font-family: $lato-regular;
+    color: $blue;
+    margin-left: 5px;
+    &:hover{
+      opacity: 0.9;
+    }
+  }
 }
 
-label{
-  text-align: left;
-  font-family: $lato-regular;
-  color: $dark;
-  // margin-bottom: 10px;
-  // margin-left: 2px;
-}
-
-input{
-
-}
 .formulario{
   display: flex;
   flex-direction: column;
+
+  &__label{
+    font-size: 1.6rem;
+    margin: 10px 5px;
+    text-align: left;
+    font-family: $lato-regular;
+    color: $dark;
+  }
 
   &__field{
     border: 1px solid #E8E8E8;
@@ -107,12 +124,15 @@ input{
     flex-direction: row;
     justify-content: space-between;
 
-    label{
-      font-size: 1.4rem;
-    }
+    
+
     span a{
       font-size: 1.4rem;
       color: $blue;
+
+      &:hover{
+        opacity: 0.9;
+      }
     }
   }
 
@@ -123,6 +143,11 @@ input{
     font-size: 1.6rem;
     border-radius: 5px;
     padding: 15px 8px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    &:hover{
+      opacity: 0.9;
+    }
   }
 
   &__login-google{
@@ -132,6 +157,28 @@ input{
     font-size: 1.6rem;
     border-radius: 5px;
     padding: 15px 8px;
-    margin-top: 10px
+    margin-top: 10px 
   }
+}
+#checkbox{
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  width: 1.3em;
+  height: 1.3em;
+}
+#checkbox:checked{
+  background-color: #2196F3;
+}
+
+#checkboxLabel{
+  margin-left: 5px;
+  font-size: 1.4rem;
+  font-family: $lato-regular;
+  color: $dark;
 }
